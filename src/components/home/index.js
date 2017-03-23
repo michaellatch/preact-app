@@ -1,7 +1,31 @@
 import { h, Component } from 'preact';
 import style from './style';
 
-export default class Tile extends Component {
+export default class Home extends Component {
+
+  let article = {
+    firstBreed: {
+      name: 'Samoyed',
+      src: 'https://www.certapet.com/dog/wp-content/uploads/sites/3/2017/02/Samoyed-1024x536.jpg',
+      alt: 'Fluffy Dog Samoyed',
+      sectionTitles: [
+        'The Big White Fluffy Dog', 
+        'Samoyed Temperament', 
+        'The Samoyed Fluffy Coat'
+      ],
+      sectionText: [
+        'First on our list is this beautiful breed originally out of Siberia.'
+        + 'Samoyed puppies were primarily bred to assist in hunting and herding'
+        + 'reindeer, as well as hauling sleds. A member of the Spitz group, ' 
+        + 'this dog can get up to 2 feet tall at the shoulders and weigh '
+        + 'nearly 60 pounds.'
+      ]  
+    },
+    secondBreed: {
+
+    }
+  };
+
   render() {
     return (
       <div class={style.home}>
