@@ -1,50 +1,60 @@
 import { h, Component } from 'preact';
 import style from './style';
 
+let article = {
+  firstBreed: {
+    name: 'Samoyed',
+    src: 'https://www.certapet.com/dog/wp-content/uploads/sites/3/2017/02/Samoyed-1024x536.jpg',
+    alt: 'Fluffy Dog Samoyed',
+    subtitles: [
+      'The Big White Fluffy Dog', 
+      'Samoyed Temperament', 
+      'The Samoyed Fluffy Coat',
+    ],
+    paragraphs: [
+      'First on our list is this beautiful breed originally out of Siberia.'
+      + 'Samoyed puppies were primarily bred to assist in hunting and herding'
+      + 'reindeer, as well as hauling sleds. A member of the Spitz group, ' 
+      + 'this dog can get up to 2 feet tall at the shoulders and weigh '
+      + 'nearly 60 pounds.'
+      ,
+      'This fluffy dog breed has an incredibly friendly demeanor. They are '
+      + 'great around kids, open to strangers and get along great with '
+      + 'other dogs. For all these reasons, they make wonderful companions '
+      + 'and very poor guard dogs. These pooches are VERY high energy and '
+      + 'require a considerable degree of attention and exercise. They '
+      + 'are forever happy, but don\'t expect them to snuggle calmly beside '
+      + 'you unless you\'ve helped them get some of the energy out '
+      + 'beforehand. In terms of trainability, they are intelligent and '
+      + 'eager to please.'
+      ,
+      'This breed has a very beautiful, white coat. However, it requires a '
+      + 'good amount of effort to keep it that way. These dogs are built for '
+      + 'cold and have a thick double coat. As such, you can expect a large '
+      + 'shedding once or twice per year. To keep your Samoyed looking their '
+      + 'best, make sure to brush them at minimum of once per week. This '
+      + 'keeps the coat looking great and helps reduce tangling.'
+    ],
+  },
+
+};
+
 export default class Home extends Component {
-
-  let article = {
-    firstBreed: {
-      name: 'Samoyed',
-      src: 'https://www.certapet.com/dog/wp-content/uploads/sites/3/2017/02/Samoyed-1024x536.jpg',
-      alt: 'Fluffy Dog Samoyed',
-      sectionTitles: [
-        'The Big White Fluffy Dog', 
-        'Samoyed Temperament', 
-        'The Samoyed Fluffy Coat'
-      ],
-      sectionText: [
-        'First on our list is this beautiful breed originally out of Siberia.'
-        + 'Samoyed puppies were primarily bred to assist in hunting and herding'
-        + 'reindeer, as well as hauling sleds. A member of the Spitz group, ' 
-        + 'this dog can get up to 2 feet tall at the shoulders and weigh '
-        + 'nearly 60 pounds.'
-      ]  
-    },
-    secondBreed: {
-
-    }
-  };
 
   render() {
     return (
       <div class={style.home}>
-        <h1>Samoyed</h1>
+        <h1>{article.firstBreed.name}</h1>
         <img 
-          class="alignnone size-large wp-image-20" 
-          src="https://www.certapet.com/dog/wp-content/uploads/sites/3/2017/02/Samoyed-1024x536.jpg" 
-          alt="Fluffy Dog Samoyed" 
-          width="1024" 
-          height="536" />
-        <h2>The Big White Fluffy Dog</h2>
-        <p>
-          First on our list is this beautiful breed originally out of Siberia. Samoyed puppies were primarily bred to assist in hunting and herding reindeer, as well as hauling sleds. A member of the Spitz group, this dog can get up to 2 feet tall at the shoulders and weigh nearly 60 pounds.
-        </p>
-        <h2>Samoyed Temperament</h2>
-        This fluffy dog breed has an incredibly friendly demeanor. They are great around kids, open to strangers and get along great with other dogs. For all these reasons, they make wonderful companions and very poor guard dogs. These pooches are VERY high energy and require a considerable degree of attention and exercise. They are forever happy, but don't expect them to snuggle calmly beside you unless you've helped them get some of the energy out beforehand. In terms of trainability, they are intelligent and eager to please.
-        <h2>The Samoyed Fluffy Coat</h2>
-        This breed has a very beautiful, white coat. However, it requires a good amount of effort to keep it that way. These dogs are built for cold and have a thick double coat. As such, you can expect a large shedding once or twice per year. To keep your Samoyed looking their best, make sure to brush them at minimum of once per week. This keeps the coat looking great and helps reduce tangling.
-        
+          class="" 
+          src={article.firstBreed.src}          
+          alt={article.firstBreed.alt}/>
+        <h2>{article.firstBreed.subtitles[0]}</h2>
+        <p>{article.firstBreed.paragraphs[0]}</p>
+        <h2>{article.firstBreed.subtitles[1]}</h2>
+        <p>{article.firstBreed.paragraphs[1]}</p>
+        <h2>{article.firstBreed.subtitles[2]}</h2>
+        <p>{article.firstBreed.paragraphs[2]}</p>        
         <h1>Chow Chow</h1>
         <img 
           class="alignnone size-large wp-image-21" src="https://www.certapet.com/dog/wp-content/uploads/sites/3/2017/02/Chow-Chow-1024x536.jpg" alt="Fluffiest dog is a Chow Chow" width="1024" height="536" />
