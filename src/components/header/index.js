@@ -10,12 +10,12 @@ export default class Header extends Component {
 					<img src="./assets/certapet-logo.png"/>
 				</a>
 
-				{/*<h1>CertaPet</h1>
+				<h1>CertaPet</h1>
 				<nav>
 					<Link href="/">Home</Link>
 					<Link href="/profile">Me</Link>
 					<Link href="/profile/john">John</Link>
-				</nav>*/}
+				</nav>
 			</header>
 		);
 	}
