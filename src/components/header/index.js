@@ -11,11 +11,11 @@ export default class Header extends Component {
 				</a>
 
 				<h1>CertaPet</h1>
-				<nav>
+				{/*<nav>
 					<Link href="/">Home</Link>
 					<Link href="/profile">Me</Link>
 					<Link href="/profile/john">John</Link>
-				</nav>
+				</nav>*/}
 			</header>
 		);
 	}
